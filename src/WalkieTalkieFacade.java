@@ -1,18 +1,16 @@
 import subsystem.*;
 
-import javax.sound.midi.Transmitter;
-
 public class WalkieTalkieFacade {
     private CloseCircuit circuit;
     private ActivateTransmitter transmitter;
     private ConvertVoiceToRadioSignal radioSignal;
     private TransmitSignal transmitSignal;
 
-    public WalkieTalkieFacade(CloseCircuit circuit,  ActivateTransmitter transmitter, ConvertVoiceToRadioSignal radioSignal, TransmitSignal transmitSignal) {
-        this.circuit = circuit;
-        this.transmitter = transmitter;
-        this.radioSignal = radioSignal;
-        this.transmitSignal = transmitSignal;
+    public void Facade() {
+        circuit = new CloseCircuit();
+        transmitter = new ActivateTransmitter();
+        radioSignal = new ConvertVoiceToRadioSignal();
+        transmitSignal = new TransmitSignal();
     }
 
     public void Speak() {
