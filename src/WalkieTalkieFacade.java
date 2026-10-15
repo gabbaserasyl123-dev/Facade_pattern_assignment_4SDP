@@ -6,7 +6,7 @@ public class WalkieTalkieFacade {
     private ConvertVoiceToRadioSignal radioSignal;
     private TransmitSignal transmitSignal;
 
-    public void Facade() {
+    public WalkieTalkieFacade() {
         circuit = new CloseCircuit();
         transmitter = new ActivateTransmitter();
         radioSignal = new ConvertVoiceToRadioSignal();
@@ -18,6 +18,6 @@ public class WalkieTalkieFacade {
         transmitter.activateTransmitter();
         radioSignal.convertVoiceToRadioSignal();
         transmitSignal.transmitSignal();
-        System.out.println("You Can Speak");
+        System.out.println("\nYou Can Speak");
     }
 }
