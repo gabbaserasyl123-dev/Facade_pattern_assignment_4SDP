@@ -1,17 +1,11 @@
 import subsystem.*;
 
 public class WalkieTalkieFacade {
-    private CloseCircuit circuit;
-    private ActivateTransmitter transmitter;
-    private ConvertVoiceToRadioSignal radioSignal;
-    private TransmitSignal transmitSignal;
 
-    public WalkieTalkieFacade() {
-        circuit = new CloseCircuit();
-        transmitter = new ActivateTransmitter();
-        radioSignal = new ConvertVoiceToRadioSignal();
-        transmitSignal = new TransmitSignal();
-    }
+    circuit = new CloseCircuit();
+    transmitter = new ActivateTransmitter();
+    radioSignal = new ConvertVoiceToRadioSignal();
+    transmitSignal = new TransmitSignal();
 
     public void Speak() {
         circuit.closeCircuit();
